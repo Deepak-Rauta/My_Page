@@ -3,38 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Links</title>
+  <title>Deepak Links</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .profile {
       text-align: center;
-      background: #f4f4f4;
-      padding: 50px;
+      margin-bottom: 30px;
     }
-    h1 {
-      margin-bottom: 20px;
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #4CAF50;
+      object-fit: cover;
     }
-    a {
-      display: block;
-      margin: 10px auto;
-      padding: 15px;
-      width: 250px;
+
+    .profile h1 {
+      margin: 10px 0 5px 0;
+    }
+
+    .profile p {
+      color: #666;
+      margin: 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 400px;
+      gap: 15px;
+    }
+
+    .links a {
       text-decoration: none;
-      background: #0077b5;
-      color: white;
+      text-align: center;
+      padding: 15px;
       border-radius: 8px;
-      transition: 0.3s;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.2s;
     }
-    a:hover {
-      background: #005582;
+
+    .links a:hover {
+      transform: scale(1.05);
+    }
+
+    .linkedin { background: #0077B5; }
+    .github { background: #333; }
+    .resume { background: #4CAF50; }
+    .portfolio { background: #FF5722; }
+
+    @media (max-width: 500px) {
+      .profile img {
+        width: 100px;
+        height: 100px;
+      }
+      .links a {
+        padding: 12px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>👋 Hi, I'm Deepak</h1>
-  <a href="https://www.linkedin.com/in/deepak-rauta/">LinkedIn</a>
-  <a href="https://github.com/Deepak-Rauta">GitHub</a>
-  <a href="https://deepak-rauta.github.io/portfollio/">Portfolio</a>
-  <a href="https://drive.google.com/file/d/1uUrHyoBWmcc-HV0XY9Sxt3GXjfg9SxR3/view?usp=drive_link">Resume</a>
+
+  <div class="profile">
+    <img src="E:\My_Image.jpg" alt="Deepak Photo">
+    <h1>Deepak Kumar Rauta</h1>
+    <p>AI & Machine Learning Enthusiast</p>
+  </div>
+
+  <div class="links">
+    <a href="https://www.linkedin.com/in/deepak-rauta/" class="linkedin">LinkedIn</a>
+    <a href="https://github.com/Deepak-Rauta" class="github">GitHub</a>
+    <a href="https://deepak-rauta.github.io/portfollio/" class="portfolio">Portfolio</a>
+    <a href="https://drive.google.com/file/d/1uUrHyoBWmcc-HV0XY9Sxt3GXjfg9SxR3/view?usp=drive_link" class="resume">Resume</a>
+    
+  </div>
+
 </body>
 </html>
